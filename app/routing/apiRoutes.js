@@ -1,10 +1,10 @@
 var friendData = require('../data/friends');
 
 module.exports = function (app) {
-  app.get("api/friends", function (req, res) {
+  app.get("/api/friends", function (req, res) {
     res.json(friendData)
   })
-  app.post("api/friends", function (req, res) {
+  app.post("/api/friends", function (req, res) {
     var bestMatch={
       name:"",
       photo:"",
@@ -18,7 +18,9 @@ module.exports = function (app) {
     for (var i = 0; i < friendData.length; i++) {
       var currentFriend = friendData[i];
       totalDiff = 0;
+
       console.log(currentFriend.name);
+      
       for (var j = 0; j < currentFriend.scores.length; j++) {
         totalDiff += Math.abs(parseInt(userScores[j]) - parseInt(currentFriend.scores[j]));
       }

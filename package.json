@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/pordonez93/FriendFinder#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "jquery": "^3.3.1"
   }
 }
